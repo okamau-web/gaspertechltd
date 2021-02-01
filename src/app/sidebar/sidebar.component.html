@@ -1,0 +1,60 @@
+<mat-toolbar style=" background-color: rgb(226, 114, 8);">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="opened=!opened">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span> Gasper Technologies</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="opened">
+
+    <mat-nav-list>
+      <div class="profile-card">
+        <div class="header">
+
+        </div>
+        <img src="../../assets/mylog3.png" alt="Gasper">
+      </div>
+
+      <mat-divider></mat-divider>
+
+      
+
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">
+        <mat-icon>home</mat-icon>Dashboard
+      </a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/customers">
+        <mat-icon>book</mat-icon>Customers
+      </a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/loans">
+        <mat-icon>settings</mat-icon>Loans
+      </a>
+
+      <mat-divider></mat-divider>
+
+      <h2 matSubheader>Tools</h2>
+
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/invoices">
+        <mat-icon>import_contacts</mat-icon>
+        Invoices
+      </a>
+
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/reports">
+        <mat-icon>contact_phone</mat-icon>
+        Reports
+      </a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/settings">
+        <mat-icon>settings</mat-icon>
+        Settings
+      </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
