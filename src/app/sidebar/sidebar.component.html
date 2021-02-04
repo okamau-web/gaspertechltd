@@ -1,4 +1,4 @@
-<mat-toolbar style=" background-color: rgb(226, 114, 8);">
+<mat-toolbar style=" background-color: rgb(226, 114, 8);" >
   <mat-toolbar-row>
     <button mat-icon-button (click)="opened=!opened">
       <mat-icon>menu</mat-icon>
@@ -23,13 +23,13 @@
 
       
 
-      <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">
+      <a mat-list-item routerLinkActive="active" routerLink="/dashboard">
         <mat-icon>home</mat-icon>Dashboard
       </a>
-      <a mat-list-item routerLinkActive="list-item-active" routerLink="/customers">
+      <a mat-list-item routerLinkActive="active" routerLink="/customers">
         <mat-icon>book</mat-icon>Customers
       </a>
-      <a mat-list-item routerLinkActive="list-item-active" routerLink="/loans">
+      <a mat-list-item routerLinkActive="active" routerLink="/loans">
         <mat-icon>settings</mat-icon>Loans
       </a>
 
@@ -37,20 +37,25 @@
 
       <h2 matSubheader>Tools</h2>
 
-      <a mat-list-item routerLinkActive="list-item-active" routerLink="/invoices">
+      <a mat-list-item routerLinkActive="active" routerLink="/invoices">
         <mat-icon>import_contacts</mat-icon>
         Invoices
       </a>
 
-      <a mat-list-item routerLinkActive="list-item-active" routerLink="/reports">
+      <a mat-list-item routerLinkActive="active" routerLink="/reports">
         <mat-icon>contact_phone</mat-icon>
         Reports
       </a>
-      <a mat-list-item routerLinkActive="list-item-active" routerLink="/settings">
+      <a mat-list-item routerLinkActive="active" routerLink="/settings">
         <mat-icon>settings</mat-icon>
         Settings
       </a>
-
+      <a mat-list-item routerLinkActive="active" routerLink="/register">
+        <mat-icon>import_contacts</mat-icon>
+        Register
+      </a>
+       
+       
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
