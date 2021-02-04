@@ -6,6 +6,8 @@ const PORT = 3000
 const api = require('./routes/api')
 const app = express()
 
+app.use(bodyParser.json())
+app.use(cors())
 
 
 const customerRouter = require('./routes/customers')
@@ -17,8 +19,6 @@ const reportsRouter = require('./routes/reports')
 
 
 
-app.use(bodyParser.json())
-app.use(cors())
 
 mongoose.connect("mongodb://localhost/GasperTechnologies", {
     useNewUrlParser: true,
@@ -31,10 +31,11 @@ db.once('open', () => console.log("connected to local MongoDB!"))
 
 
 app.use('/api', api)
+app.use('/customers',customerRouter)
 
 app.get('/', (req, res) => {
-    res.send('Hello from server')
-})
+    res.send('Hello from server 3000')
+ })
 
 app.listen(PORT, () => {
     console.log('Server running on localhost:' + PORT)

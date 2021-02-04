@@ -1,26 +1,32 @@
-POST http://localhost:3000/api/register
+POST http://localhost:3000/customers/add
 Content-Type: application/json
 
- {     "firstName":"Peris",
-      "otherNames":"Nyambura",
-      "email": "pnyambura@gmail.com",
-      "password":"1235",
-      "phone":727511616,
-      "role":"SuperAdmin",
-      "username":"peris"
+ {    "firstName":"hawa",
+   "lastName":"mohamed",
+    "emailAddress":"pnyambura1mkk0@gmail.com",
+    "phoneNumber":"072751165516",
+    "dob":"3/4/1913"
      }
 
+### 
+
+GET http://localhost:3000/customers/list
+
+ 
+ 
 ###
 
-POST http://localhost:3000/api/login
+GET http://localhost:3000/customers/601c3e9cf475dc2b28874f61
+ 
+###
+DELETE  http://localhost:3000/customers/601c3e9cf475dc2b28874f61
+
+###
+ 
+PATCH  http://localhost:3000/customers/601c3df9f475dc2b28874f5f
 Content-Type: application/json
 
- {
-      
-         
-      "username": "peris",
-      "password":"1235"
-      
-     }
-
-###
+{
+    "lastName":  "Mucheru"
+    
+}
